@@ -2,11 +2,21 @@
 
 Alle nennenswerten Änderungen an PowerPointless landen hier.
 
+## [0.3.1] — 2026-05-06
+
+### Karaoke-Kategorie entfernt — alles ist Karaoke
+
+- Die Kategorie **🎤 PowerPoint Karaoke** wurde wieder entfernt: Das ganze Game IST schon PowerPoint Karaoke, eine eigene Sub-Kategorie ergibt keinen Sinn
+- Die 3 importierten Decks wurden in passende bestehende Kategorien umgehängt:
+  - **Ernährung & Gesundheit** → Alltag + Therapie-Slot
+  - **Dein nächstes Start-up** → Alltag + Therapie-Slot
+  - **Die Welt der Delfine** → Alltag + Verschwörung
+- Bilder bleiben unter `assets/karaoke/{diet,startup,delfine}/` (Pfad behalten, weil Inhalte aus PPT-Karaoke-Vorlagen kommen)
+
 ## [0.3.0] — 2026-05-06
 
-### PowerPoint Karaoke Edition
+### PowerPoint Karaoke Decks importiert
 
-- Neue Kategorie **🎤 PowerPoint Karaoke** für Decks, die aus echten Karaoke-PowerPoint-Vorlagen importiert wurden
 - 3 neue Präsentationen mit ~9 Slides je Deck:
   - **Ernährung & Gesundheit** — TED-Talk-Style-Vorlesung über Diäten, Avocados und Schuldgefühle
   - **Dein nächstes Start-up** — Ein Pitch ohne Substanz mit allen Buzzwords (TAM, Pivot, Synergie)

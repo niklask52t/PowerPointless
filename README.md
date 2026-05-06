@@ -11,7 +11,7 @@ Ein paar Themen sind echte Klassiker der Sinnlosigkeit. Andere drehen sich um Ga
 ## Features
 
 - 100% Browser, kein Setup
-- 6 Kategorien zum Auswählen: 🎲 Random, 🎮 Gaming & R6, 🤡 Alltag, 🛋️ Therapie, 👁️ Verschwörung, 🎤 PowerPoint Karaoke
+- 5 Kategorien zum Auswählen: 🎲 Random, 🎮 Gaming & R6, 🤡 Alltag, 🛋️ Therapie, 👁️ Verschwörung
 - Vollbild-Slides mit echten Bildern aus dem Internet (via LoremFlickr / Flickr CC)
 - 3 Slide-Layouts: Cover, Bulletpoints, klassische Meme-Slides mit Impact-Typo
 - 8 visuelle Vibes (fire, vapor, toxic, cyber, noir, sun, void, paper)
