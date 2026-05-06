@@ -2,6 +2,18 @@
 
 Alle nennenswerten Änderungen an PowerPointless landen hier.
 
+## [0.3.0] — 2026-05-06
+
+### PowerPoint Karaoke Edition
+
+- Neue Kategorie **🎤 PowerPoint Karaoke** für Decks, die aus echten Karaoke-PowerPoint-Vorlagen importiert wurden
+- 3 neue Präsentationen mit ~9 Slides je Deck:
+  - **Ernährung & Gesundheit** — TED-Talk-Style-Vorlesung über Diäten, Avocados und Schuldgefühle
+  - **Dein nächstes Start-up** — Ein Pitch ohne Substanz mit allen Buzzwords (TAM, Pivot, Synergie)
+  - **Die Welt der Delfine** — Ozeanische Tiefenanalyse, vorgetragen von einer Person ohne Meereskontakt
+- Bilder aus den Originalvorlagen unter `assets/karaoke/{diet,startup,delfine}/` als Slide-Hintergründe
+- Alle Bullet-Texte und Meme-Captions sind 100% selbstgeschrieben im Game-Stil
+
 ## [0.2.0] — 2026-05-06
 
 ### Major Visual Overhaul
