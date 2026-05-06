@@ -8,7 +8,6 @@
 // Vibes (CSS-Klassen): fire, vapor, toxic, cyber, noir, sun, void, paper
 
 const CATEGORIES = [
-  { id: "random",        emoji: "🎲", title: "Komplett Random",   desc: "Alles. R6 bis Existenzkrise. Russisches Roulette für Mitspieler:innen." },
   { id: "gaming",        emoji: "🎮", title: "Gaming & R6",       desc: "Strats, Operator, Brainrot. Lord Tachanka erbarme dich." },
   { id: "alltag",        emoji: "🤡", title: "Alltagswahnsinn",   desc: "Ketchup-auf-Spaghetti, streiten mit dem Kühlschrank, Montage abschaffen." },
   { id: "therapie",      emoji: "🛋️", title: "Therapie-Slot",     desc: "Spotify Wrapped, der Ex, dein Lebenslauf als Heldenepos. Vortragen unter Tränen." },
@@ -889,83 +888,121 @@ const PRESENTATIONS = [
           "Marco gibt mir die Schuld. Marco gibt immer mir die Schuld. Marco ist das Problem."
         ],
       },
+      {
+        type: "title",
+        heading: "Hammer raus.",
+        subtitle: "Fragen? Habe ich schon zertrümmert.",
+        emoji: "🔨",
+        vibe: "fire",
+      },
     ],
   },
 
   {
-    title: "Caveiras Verhör — eine linguistische Tiefenanalyse",
-    emoji: "🗣️",
-    categories: ["gaming"],
+    title: "Caveira-Mains — ein psychologisches Profil",
+    emoji: "🤫",
+    categories: ["gaming", "therapie"],
     vibe: "noir",
     slides: [
       {
         type: "title",
-        heading: "Caveiras Verhör",
-        subtitle: "Eine linguistische Tiefenanalyse von 4 Sekunden Portugiesisch",
-        emoji: "🗣️",
+        heading: "Caveira-Mains",
+        subtitle: "Ein psychologisches Profil. Ein Aufruf zur Vorsicht.",
+        emoji: "🤫",
         vibe: "noir",
-        bg: F("dark,interrogation", 84),
       },
       {
         type: "bullets",
-        heading: "Die zentrale Frage",
-        emoji: "❓",
+        heading: "Erste Symptome",
+        emoji: "👀",
         vibe: "noir",
+        bg: F("dark,silhouette", 174),
         bullets: [
-          "Was sagt Caveira eigentlich genau in diesen 4 Sekunden?",
-          "Niemand hat je portugiesisch gelernt, um das zu wissen.",
-          "Heute ändert sich das. Vermutlich nicht.",
-          "Diese Präsentation wurde nicht von einem:r Sprachwissenschaftler:in geprüft."
+          "Spielt nur einen einzigen Operator. Niemals jemand anderen. Auch nicht beim Operator-Ban.",
+          "Spricht in der Lobby nicht. Kommt einfach in deinen Rücken.",
+          "Hat 800h Spielzeit. 798h davon im Spawn der Gegner.",
+          "Reagiert auf 'Pinge mal' mit Stille. Antwortet nur, wenn er was möchte.",
+          "Wird im Voice plötzlich laut, wenn er einen Kill hat. Wird sofort wieder still."
         ],
       },
       {
         type: "meme",
-        meme: { top: "CADÊ?", bottom: "WO BIST DU, DU IDIOT?" },
-        bg: F("scary,shadow", 86),
+        meme: { top: "DU SIEHST NICHTS", bottom: "BIS DU NICHTS MEHR SIEHST" },
         vibe: "noir",
       },
       {
         type: "bullets",
-        heading: "Phonetische Analyse",
-        emoji: "🎙️",
+        heading: "Soziales Verhalten",
+        emoji: "🥷",
         vibe: "noir",
-        bg: F("microphone,dark", 89),
+        bg: F("ninja,shadow", 178),
         bullets: [
-          "Der erste Laut: aggressiv, aber charmant.",
-          "Mittelteil: vermutlich beleidigt sie deine Mutter.",
-          "Ende: klingt wie 'CADÊ?', heißt ungefähr: 'Wo, du Idiot?'",
-          "Die Tonhöhe steigt. Genau wie dein Puls."
+          "Steht plötzlich neben dir. Du hast ihn nicht kommen gehört. Niemand hat.",
+          "Zerstört dich emotional in 3 Sätzen. Schweigt dann wieder für 40 Minuten.",
+          "Antwortet auf WhatsApp 6 Stunden später mit 'k'. Mehr nicht.",
+          "In der WG: das Geschirr steht in der Spüle. Niemand sah ihn dabei.",
+          "Bei Geburtstagen: erscheint, isst Kuchen, ist verschwunden. Niemand bemerkt's bis zum Aufräumen."
         ],
       },
       {
         type: "bullets",
-        heading: "Emotionale Wirkung",
-        emoji: "🫨",
+        heading: "Die Silent-Step-Philosophie",
+        emoji: "🌫️",
         vibe: "noir",
+        bg: F("smoke,foggy", 180),
         bullets: [
-          "Auf Defender: Verzweiflung.",
-          "Auf Attacker: 'Bro, wir hatten 3 Leben.'",
-          "Auf den Spieler selbst: kurze sadistische Befriedigung.",
-          "Auf deine Großmutter im Hintergrund: ehrliche Sorge."
+          "Im Spiel: niemand hört ihn kommen.",
+          "Im echten Leben: niemand hört ihn weggehen.",
+          "Beim Date: er sitzt schon am Tisch, bevor du das Restaurant betrittst.",
+          "Bei der Arbeit: das Projekt ist fertig, bevor du den Auftrag bekommst. Er sagt es niemandem.",
+          "Beim Sport: er war beim Marathon. Niemand hat ihn gesehen. Trotzdem 1. Platz."
         ],
       },
       {
         type: "meme",
-        meme: { top: "SIE WEIß", bottom: "WO DU BIST." },
-        bg: F("eye,closeup", 92),
+        meme: { top: "ICH BIN NICHT DA", bottom: "DU AUCH NICHT MEHR" },
+        vibe: "noir",
+      },
+      {
+        type: "bullets",
+        heading: "Wie erkenne ich einen Cav-Main?",
+        emoji: "🔍",
+        vibe: "noir",
+        bg: F("magnifying,glass", 183),
+        bullets: [
+          "Schwarze Klamotten. Immer. Auch im Sommer.",
+          "Antwortet auf Smalltalk mit einem leichten Nicken. Mehr nicht.",
+          "Ist immer pünktlich. Ohne Ankündigung.",
+          "Sein Discord-Status ist 'Online' seit 2017. Er sagt aber nie etwas im Voice.",
+          "Hat ein Spotify Wrapped Top-Genre 'Brazilian Funk'. Er gibt es nicht zu."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Survivor's Guide",
+        emoji: "🆘",
+        vibe: "fire",
+        bg: F("survival,manual", 187),
+        bullets: [
+          "Schau immer hinter dich. Auch beim Frühstück.",
+          "Drohnen sind sinnlos. Sie hat sie schon zerstört.",
+          "Wenn du sie nicht findest, ist sie schon hinter dir.",
+          "Akzeptiere dein Schicksal. Es ist schneller so.",
+          "Wenn du beten möchtest — bete leise. Sie hört dich."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "AKZEPTANZ", bottom: "KOMMT VON HINTEN" },
+        bg: F("dark,figure", 190),
         vibe: "fire",
       },
       {
-        type: "bullets",
-        heading: "Vermächtnis",
-        emoji: "🇧🇷",
+        type: "title",
+        heading: "Vielen Dank.",
+        subtitle: "Schau hinter dich. Genau jetzt. Schnell.",
+        emoji: "🤫",
         vibe: "noir",
-        bullets: [
-          "Caveira ist die einzige Operatorin mit eigener TED-Talk-Stimme.",
-          "Sie hat mehr Spieler ins Spawn-Peek getrieben als jede andere.",
-          "Sie ist die wahre Lehrerin der Geduld.",
-          "Eine portugiesische Sprachschule sollte ihr ein Stipendium widmen."
-        ],
       },
     ],
   },
@@ -999,7 +1036,6 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "SLAVA", bottom: "TACHANKA" },
-        bg: F("statue,monument", 97),
         vibe: "toxic",
       },
       {
@@ -1044,6 +1080,13 @@ const PRESENTATIONS = [
           "Slava Tachanka.",
           "Wenn du jetzt nicht klatschst, weiß ich, wer du wirklich bist."
         ],
+      },
+      {
+        type: "title",
+        heading: "Slava Tachanka.",
+        subtitle: "Lange lebe der Lord. Auch wenn er langsam läuft.",
+        emoji: "👑",
+        vibe: "toxic",
       },
     ],
   },
@@ -1123,6 +1166,13 @@ const PRESENTATIONS = [
           "Mein erster echter Clutch war hier. Ich spreche heute noch davon. Niemand hört zu."
         ],
       },
+      {
+        type: "title",
+        heading: "Vielen Dank.",
+        subtitle: "Falls jemand auf die Toilette muss — Platz 1 ist nebenan.",
+        emoji: "🚽",
+        vibe: "vapor",
+      },
     ],
   },
 
@@ -1200,6 +1250,13 @@ const PRESENTATIONS = [
           "Drei Stunden YouTube-Tutorials, um den Granatwerfer zu kontern. Es gibt keine.",
           "Du startest das Spiel um 2 Uhr morgens neu, um 'nur kurz Rache zu nehmen'."
         ],
+      },
+      {
+        type: "title",
+        heading: "Atme tief durch.",
+        subtitle: "Nächste Runde fängt in 5 Sekunden an. Du bist eh nicht stark genug zu pausieren.",
+        emoji: "🤬",
+        vibe: "fire",
       },
     ],
   },
@@ -1279,6 +1336,13 @@ const PRESENTATIONS = [
           "Petition unterschrieben — von mir, allein, dreimal."
         ],
       },
+      {
+        type: "title",
+        heading: "Save the Planet.",
+        subtitle: "Open the Lobby. Pick Mira. Save 1 Polar Bear.",
+        emoji: "🪞",
+        vibe: "cyber",
+      },
     ],
   },
 
@@ -1356,6 +1420,13 @@ const PRESENTATIONS = [
           "Bis dahin: peeken, prayen, sterben.",
           "Die nächste Runde fängt in 5 Sekunden an."
         ],
+      },
+      {
+        type: "title",
+        heading: "Frieden ist nicht das Ziel.",
+        subtitle: "Sieg ist das Ziel. Bombsite B ist meins.",
+        emoji: "🌐",
+        vibe: "void",
       },
     ],
   },
@@ -1435,6 +1506,13 @@ const PRESENTATIONS = [
           "Eine Netflix-Serie. Mit hoher Produktion. 'The Drone'."
         ],
       },
+      {
+        type: "title",
+        heading: "Für die Drohnen.",
+        subtitle: "Eine Schweigeminute. Bitte.",
+        emoji: "🤖",
+        vibe: "cyber",
+      },
     ],
   },
 
@@ -1513,6 +1591,13 @@ const PRESENTATIONS = [
           "Bete. Es funktioniert nicht, aber es fühlt sich richtig an."
         ],
       },
+      {
+        type: "title",
+        heading: "Niemals peeken.",
+        subtitle: "Außer aus diesem Slide. Hier ist es sicher. Hoffe ich.",
+        emoji: "🎯",
+        vibe: "noir",
+      },
     ],
   },
 
@@ -1590,6 +1675,13 @@ const PRESENTATIONS = [
           "Dann report den Spieler aus Runde 7.",
           "Dann starte eine neue Runde. Es gibt immer eine neue Runde."
         ],
+      },
+      {
+        type: "title",
+        heading: "Und denk dran:",
+        subtitle: "Mama hat dich lieb. Der Spieler aus Runde 7 nicht.",
+        emoji: "❤️",
+        vibe: "fire",
       },
     ],
   },
