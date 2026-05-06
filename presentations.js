@@ -13,7 +13,6 @@ const CATEGORIES = [
   { id: "alltag",        emoji: "🤡", title: "Alltagswahnsinn",   desc: "Ketchup-auf-Spaghetti, streiten mit dem Kühlschrank, Montage abschaffen." },
   { id: "therapie",      emoji: "🛋️", title: "Therapie-Slot",     desc: "Spotify Wrapped, der Ex, dein Lebenslauf als Heldenepos. Vortragen unter Tränen." },
   { id: "verschwoerung", emoji: "👁️", title: "Verschwörung",      desc: "Tauben sind Drohnen. Socken sind Quantenobjekte. Wache auf." },
-  { id: "karaoke",       emoji: "🎤", title: "PowerPoint Karaoke", desc: "Echte PowerPoint-Karaoke-Decks: fremde Bilder, dein Improvisationstalent, kein Entkommen." },
 ];
 
 // Helper: erzeugt deterministische "echte" Bilder via LoremFlickr (Flickr CC).
@@ -1603,7 +1602,7 @@ const PRESENTATIONS = [
   {
     title: "Ernährung & Gesundheit — eine TED-Talk-Vorlesung",
     emoji: "🥑",
-    categories: ["karaoke", "alltag"],
+    categories: ["alltag", "therapie"],
     vibe: "toxic",
     slides: [
       {
@@ -1698,7 +1697,7 @@ const PRESENTATIONS = [
   {
     title: "Dein nächstes Start-up — ein Pitch ohne Substanz",
     emoji: "🚀",
-    categories: ["karaoke", "alltag"],
+    categories: ["alltag", "therapie"],
     vibe: "cyber",
     slides: [
       {
@@ -1798,7 +1797,7 @@ const PRESENTATIONS = [
   {
     title: "Die Welt der Delfine — eine ozeanische Tiefenanalyse",
     emoji: "🐬",
-    categories: ["karaoke", "alltag"],
+    categories: ["alltag", "verschwoerung"],
     vibe: "vapor",
     slides: [
       {
