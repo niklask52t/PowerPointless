@@ -13,6 +13,7 @@ const CATEGORIES = [
   { id: "alltag",        emoji: "🤡", title: "Alltagswahnsinn",   desc: "Ketchup-auf-Spaghetti, streiten mit dem Kühlschrank, Montage abschaffen." },
   { id: "therapie",      emoji: "🛋️", title: "Therapie-Slot",     desc: "Spotify Wrapped, der Ex, dein Lebenslauf als Heldenepos. Vortragen unter Tränen." },
   { id: "verschwoerung", emoji: "👁️", title: "Verschwörung",      desc: "Tauben sind Drohnen. Socken sind Quantenobjekte. Wache auf." },
+  { id: "karaoke",       emoji: "🎤", title: "PowerPoint Karaoke", desc: "Echte PowerPoint-Karaoke-Decks: fremde Bilder, dein Improvisationstalent, kein Entkommen." },
 ];
 
 // Helper: erzeugt deterministische "echte" Bilder via LoremFlickr (Flickr CC).
@@ -1590,6 +1591,308 @@ const PRESENTATIONS = [
           "Dann report den Spieler aus Runde 7.",
           "Dann starte eine neue Runde. Es gibt immer eine neue Runde."
         ],
+      },
+    ],
+  },
+
+  // ============================================================
+  // POWERPOINT KARAOKE — Decks aus echten Karaoke-Vorlagen.
+  // Bilder kommen aus den Originalen, Inhalt ist komplett selbst geschrieben.
+  // ============================================================
+
+  {
+    title: "Ernährung & Gesundheit — eine TED-Talk-Vorlesung",
+    emoji: "🥑",
+    categories: ["karaoke", "alltag"],
+    vibe: "toxic",
+    slides: [
+      {
+        type: "title",
+        heading: "Ernährung & Gesundheit",
+        subtitle: "Eine wissenschaftliche Vorlesung. Vorgetragen von einer Person, die heute Brot zum Frühstück hatte.",
+        emoji: "🥑",
+        vibe: "toxic",
+        bg: "assets/karaoke/diet/image1.png",
+      },
+      {
+        type: "bullets",
+        heading: "Was ist eigentlich gesund?",
+        emoji: "🤔",
+        vibe: "toxic",
+        bg: "assets/karaoke/diet/image2.png",
+        bullets: [
+          "Alles, was grün ist. Außer Wackelpudding. (Komplizierte Sache.)",
+          "Alles, was bitter schmeckt. Wenn es weh tut, ist es gesund.",
+          "Wasser. Aber nur, wenn du es 'Hydration' nennst.",
+          "Dinge, die deine Oma gegessen hat — UND auch Dinge, die deine Oma niemals essen würde."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "WIE VIEL DARF ICH ESSEN", bottom: "JA." },
+        bg: "assets/karaoke/diet/image5.png",
+        vibe: "fire",
+      },
+      {
+        type: "bullets",
+        heading: "Die 5 Säulen der modernen Ernährung",
+        emoji: "🏛️",
+        vibe: "toxic",
+        bg: "assets/karaoke/diet/image3.png",
+        bullets: [
+          "1. Avocado. Aus Prinzip.",
+          "2. Smoothie Bowls. Sehen besser aus, als sie schmecken.",
+          "3. Eine Wasserflasche, die aussieht wie Apothekenglas. Kostet 30€.",
+          "4. Eine App, die dir sagt, wann du atmen sollst.",
+          "5. Schuldgefühle. Sehr wichtig. Treibstoff."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Was die Wissenschaft uns lehrt",
+        emoji: "🔬",
+        vibe: "toxic",
+        bg: "assets/karaoke/diet/image8.png",
+        bullets: [
+          "Studie 1: Kaffee ist tödlich.",
+          "Studie 2 (drei Wochen später): Kaffee verlängert das Leben.",
+          "Studie 3: Wir wissen nichts. Niemand weiß etwas.",
+          "Was wir wissen: Eine Tafel Schokolade allein zählt nicht. Drei aber auch nicht."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "ICH BIN KEIN ARZT", bottom: "ABER ICH HABE GEFÜHLE" },
+        bg: "assets/karaoke/diet/image6.png",
+        vibe: "fire",
+      },
+      {
+        type: "bullets",
+        heading: "Die Diät-Hierarchie",
+        emoji: "📊",
+        vibe: "toxic",
+        bg: "assets/karaoke/diet/image9.png",
+        bullets: [
+          "Keto: Du bist eigentlich ein:e Bär:in im Winterschlaf.",
+          "Vegan: Du HAST es gesagt. Das war auch der Sinn.",
+          "Intermittierendes Fasten: Frühstück gehasst, jetzt eine Persönlichkeit.",
+          "Mediterran: Du hattest mal Urlaub in Italien und ja, du hast es gemerkt."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Fazit",
+        emoji: "🥖",
+        vibe: "toxic",
+        bg: "assets/karaoke/diet/image11.png",
+        bullets: [
+          "Iss, was du willst. Stirb sowieso.",
+          "Die einzige unzweifelhaft gesunde Aktivität ist: aufhören, drüber zu reden.",
+          "Brot ist Liebe. Brot war immer Liebe.",
+          "Vielen Dank. Bitte stellt mir keine Fragen, ich bin hungrig."
+        ],
+      },
+    ],
+  },
+
+  {
+    title: "Dein nächstes Start-up — ein Pitch ohne Substanz",
+    emoji: "🚀",
+    categories: ["karaoke", "alltag"],
+    vibe: "cyber",
+    slides: [
+      {
+        type: "title",
+        heading: "Dein nächstes Start-up",
+        subtitle: "Ein Pitch, der in 0 Sekunden 0 Investor:innen überzeugen wird. Du bist trotzdem hier.",
+        emoji: "🚀",
+        vibe: "cyber",
+        bg: "assets/karaoke/startup/image3.jpg",
+      },
+      {
+        type: "bullets",
+        heading: "Die Vision",
+        emoji: "👁️",
+        vibe: "cyber",
+        bg: "assets/karaoke/startup/image11.jpg",
+        bullets: [
+          "Wir bringen Synergie zwischen Mensch und Cloud.",
+          "Wir disruptieren eine Branche, die bisher niemand kannte.",
+          "Unser Ziel: ein Unicorn werden. Notfalls als Pferd mit Hut.",
+          "Mission Statement: 'Den Status quo neu denken.' Was das heißt? Egal."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "WIR SIND DAS UBER", bottom: "FÜR... IRGENDWAS" },
+        bg: "assets/karaoke/startup/image5.png",
+        vibe: "cyber",
+      },
+      {
+        type: "bullets",
+        heading: "Das Geschäftsmodell",
+        emoji: "💸",
+        vibe: "cyber",
+        bg: "assets/karaoke/startup/image7.jpg",
+        bullets: [
+          "Phase 1: Geld einsammeln.",
+          "Phase 2: ???",
+          "Phase 3: Profit.",
+          "Phase 4: Akquise durch Google. Wir nennen es einen 'soft landing'."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Der Markt",
+        emoji: "📈",
+        vibe: "cyber",
+        bg: "assets/karaoke/startup/image8.jpg",
+        bullets: [
+          "TAM: 70 Milliarden. (Quelle: vertraue mir.)",
+          "Wettbewerber: keine. Wirklich.",
+          "Konkurrent A existiert, aber sie verstehen das Problem nicht.",
+          "Wir adressieren eine Zielgruppe, die noch nicht weiß, dass sie existiert."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "WE'RE NOT A COMPANY", bottom: "WE'RE A MOVEMENT" },
+        bg: "assets/karaoke/startup/image12.jpg",
+        vibe: "fire",
+      },
+      {
+        type: "bullets",
+        heading: "Das Team",
+        emoji: "👥",
+        vibe: "cyber",
+        bg: "assets/karaoke/startup/image13.jpg",
+        bullets: [
+          "Drei Co-Founder. Alle CEO. Niemand schreibt Code.",
+          "CTO: 'Wir suchen noch.'",
+          "Eine Praktikantin namens Mara, die eigentlich alles macht.",
+          "Ein Beirat aus drei LinkedIn-Influencer:innen. Sie posten viel über Resilienz."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Die Roadmap",
+        emoji: "🗺️",
+        vibe: "cyber",
+        bg: "assets/karaoke/startup/image14.png",
+        bullets: [
+          "Q1 2026: MVP launchen. Niemand benutzt es.",
+          "Q2 2026: Pivot. Jetzt sind wir eine KI-Firma.",
+          "Q3 2026: Zweiter Pivot. Jetzt sind wir eine Bank.",
+          "Q4 2026: Insolvent, aber mit guter Pressemitteilung."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "FRAGEN?", bottom: "(BITTE NICHT)" },
+        bg: "assets/karaoke/startup/image15.png",
+        vibe: "noir",
+      },
+    ],
+  },
+
+  {
+    title: "Die Welt der Delfine — eine ozeanische Tiefenanalyse",
+    emoji: "🐬",
+    categories: ["karaoke", "alltag"],
+    vibe: "vapor",
+    slides: [
+      {
+        type: "title",
+        heading: "Die Welt der Delfine",
+        subtitle: "Eine ozeanische Tiefenanalyse. Vorgetragen von einer Person, die noch nie im Meer war.",
+        emoji: "🐬",
+        vibe: "vapor",
+        bg: "assets/karaoke/delfine/image2.png",
+      },
+      {
+        type: "bullets",
+        heading: "Was ist ein Delfin?",
+        emoji: "🌊",
+        vibe: "vapor",
+        bg: "assets/karaoke/delfine/image3.png",
+        bullets: [
+          "Wissenschaftlich: ein Säugetier, das im Wasser lebt und uns auslacht.",
+          "Soziologisch: das Tier, das deine Tante als 'Krafttier' angegeben hat.",
+          "Politisch: vermutlich Sozialdemokrat:in. Klingt jedenfalls so.",
+          "Spirituell: ein Hai mit Therapieausbildung."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "DELFINE LACHEN ÜBER UNS", bottom: "WIR LACHEN ZURÜCK" },
+        bg: "assets/karaoke/delfine/image4.png",
+        vibe: "vapor",
+      },
+      {
+        type: "bullets",
+        heading: "Erstaunliche Fakten",
+        emoji: "🐟",
+        vibe: "vapor",
+        bg: "assets/karaoke/delfine/image5.png",
+        bullets: [
+          "Delfine schlafen mit nur einer Gehirnhälfte. Wir schlafen mit beiden Gehirnhälften und können trotzdem kein Excel.",
+          "Delfine erkennen sich im Spiegel. Manche Menschen auch — beim Fotografieren ihrer eigenen Frühstücksbowl.",
+          "Sie haben eigene Namen für sich. Wir haben TikTok-Handles. Gleicher Vibe.",
+          "Delfine retten Menschen. Menschen retten Delfine durch Spendenaufrufe in WhatsApp-Status."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Delfine in der Popkultur",
+        emoji: "🎬",
+        vibe: "vapor",
+        bg: "assets/karaoke/delfine/image6.png",
+        bullets: [
+          "Flipper: 60er Jahre, geliebt, leicht problematisch im Rückblick.",
+          "'Free Willy': war eigentlich ein Wal, aber wir nehmen das mit.",
+          "Delfin-Tattoos in der Lendengegend: ein historisches Zeitdokument.",
+          "Delfin-Memojis: das ehrlichste Emoji der Generation Z."
+        ],
+      },
+      {
+        type: "meme",
+        meme: { top: "DELFINE: 1", bottom: "MENSCHHEIT: 0" },
+        bg: "assets/karaoke/delfine/image11.png",
+        vibe: "fire",
+      },
+      {
+        type: "bullets",
+        heading: "Was wir von Delfinen lernen können",
+        emoji: "🧠",
+        vibe: "vapor",
+        bg: "assets/karaoke/delfine/image12.png",
+        bullets: [
+          "Lebe in Gruppen. Aber lass die nervigen draußen.",
+          "Atme bewusst. Buchstäblich. Sie tun es auch nur halb.",
+          "Echolokation > Google Maps.",
+          "Du musst nicht alles ernst nehmen. Du musst nur durch das Wasser springen."
+        ],
+      },
+      {
+        type: "bullets",
+        heading: "Die dunkle Seite",
+        emoji: "🌑",
+        vibe: "noir",
+        bg: "assets/karaoke/delfine/image13.png",
+        bullets: [
+          "Delfine sind nicht immer nett. Sie können sehr ungezogen sein.",
+          "Es gibt Berichte von 'Bullying' unter Delfinen. Auch unter uns. Wir sind alle Delfine.",
+          "Manche Delfine spielen mit ihrer Beute. Genau wie deine Mitbewohner:innen mit dem letzten Joghurt im Kühlschrank.",
+          "Sie sind hochintelligent. Das ist nicht immer eine gute Nachricht."
+        ],
+      },
+      {
+        type: "title",
+        heading: "Vielen Dank.",
+        subtitle: "Adoptiere einen Delfin. Oder zumindest sein WhatsApp-Profilbild.",
+        emoji: "🐬",
+        vibe: "vapor",
+        bg: "assets/karaoke/delfine/image14.png",
       },
     ],
   },
