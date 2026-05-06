@@ -5,36 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PowerPointless — Halt eine Präsentation, du Feigling</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <main id="app">
+
+    <!-- HOME -->
     <section id="home" class="screen active">
-      <h1 class="logo">Power<span class="strike">Point</span><span class="accent">less</span></h1>
-      <p class="tagline">Klick. Steh auf. Präsentiere. Keine Ausreden.</p>
-      <button id="generate-btn" class="big-btn">Generate Presentation</button>
-      <p class="hint">Tipp: Die Person rechts vom Klicker präsentiert. Pfeile = Slides wechseln.</p>
+      <div class="home-inner">
+        <h1 class="logo">Power<span class="strike">Point</span><span class="accent">less</span></h1>
+        <p class="tagline">Klick. Steh auf. Präsentiere. Keine Ausreden.</p>
+        <button id="start-btn" class="big-btn">Los geht's</button>
+        <p class="hint">Tipp: Die Person rechts vom Klicker präsentiert. Pfeile / Leertaste = Slides wechseln.</p>
+      </div>
     </section>
 
-    <section id="presentation" class="screen">
-      <header class="slide-header">
-        <span id="slide-counter" class="counter"></span>
-        <button id="exit-btn" class="ghost-btn" title="Zurück">×</button>
+    <!-- CATEGORIES -->
+    <section id="categories" class="screen">
+      <header class="cat-header">
+        <h2>Wähle deine Kategorie</h2>
+        <p class="muted">Welche Art von Schmerz möchtest du heute deinen Freunden zufügen?</p>
       </header>
-      <article id="slide" class="slide">
-        <h2 id="slide-heading"></h2>
-        <ul id="slide-bullets"></ul>
-      </article>
-      <footer class="slide-footer">
-        <button id="prev-btn" class="nav-btn">← Zurück</button>
-        <button id="next-btn" class="nav-btn primary">Weiter →</button>
-      </footer>
+      <div id="cat-grid" class="cat-grid"></div>
+      <button id="back-home-btn" class="ghost-btn-text">← zurück</button>
     </section>
 
-    <section id="end" class="screen">
-      <h2>Applaus, Applaus.</h2>
-      <p id="end-line"></p>
-      <button id="again-btn" class="big-btn">Nächstes Opfer</button>
+    <!-- PRESENTATION (Fullscreen) -->
+    <section id="presentation" class="screen presentation-screen">
+      <div id="slide" class="slide">
+        <!-- dynamisch befüllt -->
+      </div>
+      <div class="slide-overlay">
+        <header class="slide-topbar">
+          <span id="slide-counter" class="counter"></span>
+          <button id="exit-btn" class="ghost-btn" title="Zurück (Esc)">×</button>
+        </header>
+        <footer class="slide-footer">
+          <button id="prev-btn" class="nav-btn">← Zurück</button>
+          <button id="next-btn" class="nav-btn primary">Weiter →</button>
+        </footer>
+      </div>
     </section>
+
+    <!-- END -->
+    <section id="end" class="screen">
+      <div class="home-inner">
+        <h2 class="end-title">Applaus, Applaus.</h2>
+        <p id="end-line" class="tagline"></p>
+        <div class="end-actions">
+          <button id="again-btn" class="big-btn">Nächstes Opfer</button>
+          <button id="end-cat-btn" class="ghost-btn-text">andere Kategorie</button>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script src="presentations.js"></script>
