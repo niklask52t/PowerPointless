@@ -1,18 +1,25 @@
 (() => {
   const screens = {
-    home:         document.getElementById("home"),
-    categories:   document.getElementById("categories"),
-    presentation: document.getElementById("presentation"),
-    end:          document.getElementById("end"),
+    home:             document.getElementById("home"),
+    categories:       document.getElementById("categories"),
+    presentationList: document.getElementById("presentation-list"),
+    presentation:     document.getElementById("presentation"),
+    end:              document.getElementById("end"),
   };
 
   const startBtn      = document.getElementById("start-btn");
   const backHomeBtn   = document.getElementById("back-home-btn");
+  const backCatBtn    = document.getElementById("back-cat-btn");
   const catGrid       = document.getElementById("cat-grid");
+  const presGrid      = document.getElementById("pres-grid");
+  const listTitle     = document.getElementById("list-title");
+  const listSubtitle  = document.getElementById("list-subtitle");
+  const randomCatBtn  = document.getElementById("random-from-cat");
   const exitBtn       = document.getElementById("exit-btn");
   const prevBtn       = document.getElementById("prev-btn");
   const nextBtn       = document.getElementById("next-btn");
   const againBtn      = document.getElementById("again-btn");
+  const endListBtn    = document.getElementById("end-list-btn");
   const endCatBtn     = document.getElementById("end-cat-btn");
   const slideEl       = document.getElementById("slide");
   const slideCounter  = document.getElementById("slide-counter");
@@ -54,20 +61,47 @@
       card.className = "cat-card";
       card.innerHTML = `
         <div class="cat-emoji">${cat.emoji}</div>
-        <div class="cat-title">${cat.title}</div>
-        <div class="cat-desc">${cat.desc}</div>
+        <div class="cat-title">${escape(cat.title)}</div>
+        <div class="cat-desc">${escape(cat.desc)}</div>
         <div class="cat-count">${count} Präsentation${count === 1 ? "" : "en"}</div>
       `;
       card.addEventListener("click", () => {
         currentCategory = cat.id;
-        startPresentation();
+        openPresentationList();
       });
       catGrid.appendChild(card);
     });
   }
 
+  /* ---------------- PRESENTATION LIST ---------------- */
+  function openPresentationList() {
+    const cat = CATEGORIES.find((c) => c.id === currentCategory);
+    const pool = presentationsFor(currentCategory);
+
+    listTitle.textContent = cat ? `${cat.emoji} ${cat.title}` : "Wähle eine Präsentation";
+    listSubtitle.textContent = cat ? cat.desc : "";
+
+    presGrid.innerHTML = "";
+    pool.forEach((pres) => {
+      const card = document.createElement("button");
+      card.className = "pres-card";
+      const slideCount = pres.slides.length;
+      card.innerHTML = `
+        <div class="pres-emoji">${pres.emoji || "📊"}</div>
+        <div class="pres-info">
+          <div class="pres-title">${escape(pres.title)}</div>
+          <div class="pres-meta">${slideCount} Slide${slideCount === 1 ? "" : "s"}</div>
+        </div>
+      `;
+      card.addEventListener("click", () => startWithPresentation(pres));
+      presGrid.appendChild(card);
+    });
+
+    showScreen("presentationList");
+  }
+
   /* ---------------- PRESENTATION FLOW ---------------- */
-  function pickPresentation() {
+  function pickRandomPresentation() {
     const pool = presentationsFor(currentCategory);
     if (pool.length === 0) return null;
     if (pool.length === 1) return pool[0];
@@ -75,17 +109,20 @@
     do {
       next = pool[Math.floor(Math.random() * pool.length)];
     } while (next.title === lastTitle);
-    lastTitle = next.title;
     return next;
   }
 
-  function startPresentation() {
-    const pres = pickPresentation();
+  function startWithPresentation(pres) {
     if (!pres) return;
     currentPres = pres;
+    lastTitle = pres.title;
     slideIndex = 0;
     renderSlide();
     showScreen("presentation");
+  }
+
+  function startRandom() {
+    startWithPresentation(pickRandomPresentation());
   }
 
   /* ---------------- SLIDE RENDERING ---------------- */
@@ -96,19 +133,16 @@
 
     slideCounter.textContent = `Slide ${slideIndex + 1} / ${total} · ${currentPres.emoji || ""} ${currentPres.title}`;
 
-    // Reset slide element
     slideEl.className = "slide";
     slideEl.classList.add(`vibe-${vibe}`);
     slideEl.classList.add(`layout-${slide.type || "bullets"}`);
     slideEl.innerHTML = "";
 
-    // Background layer (always present, gets vibe gradient via vibe class)
     const bgEl = document.createElement("div");
     bgEl.className = "slide-bg";
     if (slide.bg) bgEl.style.backgroundImage = `url("${slide.bg}")`;
     slideEl.appendChild(bgEl);
 
-    // Content per type
     const content = document.createElement("div");
     content.className = "slide-content";
 
@@ -123,7 +157,6 @@
       const bottom = slide.meme && slide.meme.bottom ? `<div class="meme-text bottom">${escape(slide.meme.bottom)}</div>` : "";
       content.innerHTML = top + `<div></div>` + bottom;
     } else {
-      // bullets (default)
       const emojiBlock = slide.emoji ? `<div class="bullets-emoji">${slide.emoji}</div>` : "";
       if (!slide.emoji) slideEl.classList.add("no-emoji");
       content.innerHTML = `
@@ -169,13 +202,16 @@
   }
 
   /* ---------------- EVENT WIRING ---------------- */
-  startBtn.addEventListener("click",   () => showScreen("categories"));
-  backHomeBtn.addEventListener("click", () => showScreen("home"));
-  exitBtn.addEventListener("click",    () => showScreen("categories"));
-  nextBtn.addEventListener("click",    next);
-  prevBtn.addEventListener("click",    prev);
-  againBtn.addEventListener("click",   startPresentation);
-  endCatBtn.addEventListener("click",  () => showScreen("categories"));
+  startBtn.addEventListener("click",      () => showScreen("categories"));
+  backHomeBtn.addEventListener("click",   () => showScreen("home"));
+  backCatBtn.addEventListener("click",    () => showScreen("categories"));
+  randomCatBtn.addEventListener("click",  startRandom);
+  exitBtn.addEventListener("click",       openPresentationList);
+  nextBtn.addEventListener("click",       next);
+  prevBtn.addEventListener("click",       prev);
+  againBtn.addEventListener("click",      startRandom);
+  endListBtn.addEventListener("click",    openPresentationList);
+  endCatBtn.addEventListener("click",     () => showScreen("categories"));
 
   document.addEventListener("keydown", (e) => {
     if (!screens.presentation.classList.contains("active")) return;
@@ -186,7 +222,7 @@
       e.preventDefault();
       prev();
     } else if (e.key === "Escape") {
-      showScreen("categories");
+      openPresentationList();
     }
   });
 

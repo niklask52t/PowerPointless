@@ -2,6 +2,22 @@
 
 Alle nennenswerten Änderungen an PowerPointless landen hier.
 
+## [0.4.0] — 2026-05-06
+
+### Präsentations-Liste + Lesbarkeits-Fix
+
+- **Neuer Screen: Präsentations-Liste** zwischen Kategorie-Auswahl und Slides
+  - Pro Kategorie wird jetzt eine Liste aller Präsentationen angezeigt
+  - Großer "🎲 Zufällige aus dieser Kategorie"-Button bleibt für die Random-Variante
+  - Jede Präsentation als kompakte Karte mit Emoji, Titel und Slide-Count
+- **Esc** und **× im Slide** gehen jetzt zur Präsentations-Liste statt zur Kategorie-Auswahl
+- End-Screen hat jetzt 3 Optionen: Nächstes Opfer (random) / andere Präsentation wählen / andere Kategorie
+- **Lesbarkeit verbessert** — Text ist jetzt auf jedem Background sauber lesbar:
+  - Vibe-Overlays alle deutlich dunkler (alpha 0.78–0.92 statt 0.35–0.85)
+  - Bullet-Slides bekommen einen halbtransparenten dunklen Backdrop mit Blur als Card unter dem Text
+  - Stärkere `text-shadow` auf Headings, Bullets und Subtitles
+  - Meme-Slides bleiben absichtlich heller (Image dominiert, weil der Caption-Text eh dicke schwarze Outline hat)
+
 ## [0.3.1] — 2026-05-06
 
 ### Karaoke-Kategorie entfernt — alles ist Karaoke
