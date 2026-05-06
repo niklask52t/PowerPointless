@@ -11,9 +11,12 @@ Ein paar Themen sind echte Klassiker der Sinnlosigkeit. Andere drehen sich um Ga
 ## Features
 
 - 100% Browser, kein Setup
-- Komplett zufällige Präsentationen mit mehreren Slides
-- Mix aus alltäglichem Schwachsinn und R6 / Gaming Brainrot
-- Pfeiltasten zum Durchklicken — wie eine echte Präsentation
+- 5 Kategorien zum Auswählen: 🎲 Random, 🎮 Gaming & R6, 🤡 Alltag, 🛋️ Therapie, 👁️ Verschwörung
+- Vollbild-Slides mit echten Bildern aus dem Internet (via LoremFlickr / Flickr CC)
+- 3 Slide-Layouts: Cover, Bulletpoints, klassische Meme-Slides mit Impact-Typo
+- 8 visuelle Vibes (fire, vapor, toxic, cyber, noir, sun, void, paper)
+- 20+ Präsentationen mit über 120 Slides
+- Pfeiltasten / Leertaste / Enter zum Durchklicken — wie eine echte Präsentation
 - Perfekt für WG-Abende, Pre-Games, oder wenn euch wirklich nichts mehr einfällt
 
 ## Wie spielt man?
