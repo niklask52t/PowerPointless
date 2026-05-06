@@ -14,10 +14,6 @@ const CATEGORIES = [
   { id: "verschwoerung", emoji: "👁️", title: "Verschwörung",      desc: "Tauben sind Drohnen. Socken sind Quantenobjekte. Wache auf." },
 ];
 
-// Helper: erzeugt deterministische "echte" Bilder via LoremFlickr (Flickr CC).
-// Falls LoremFlickr mal nicht antwortet: Picsum als Fallback.
-const F = (tags, lock = 1) => `https://loremflickr.com/1600/900/${tags}?lock=${lock}`;
-const P = (seed)            => `https://picsum.photos/seed/${seed}/1600/900`;
 
 const PRESENTATIONS = [
   // ============================================================
@@ -35,7 +31,7 @@ const PRESENTATIONS = [
         subtitle: "Eine streng wissenschaftliche Aufarbeitung",
         emoji: "🐦",
         vibe: "noir",
-        bg: F("pigeon,city", 5),
+        bg: "assets/flickr/pigeon-city-5.jpg",
       },
       {
         type: "bullets",
@@ -52,7 +48,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DU FÜTTERST SIE", bottom: "SIE FÜTTERN DEINE DATEN" },
-        bg: F("pigeon,bread", 12),
+        bg: "assets/flickr/pigeon-bread-12.jpg",
         vibe: "fire",
       },
       {
@@ -60,7 +56,7 @@ const PRESENTATIONS = [
         heading: "Indizien aus dem Alltag",
         emoji: "📡",
         vibe: "noir",
-        bg: F("pigeon,wires", 7),
+        bg: "assets/flickr/pigeon-wires-7.jpg",
         bullets: [
           "Tauben sitzen IMMER auf Stromleitungen — sie laden sich auf.",
           "Sie verschwinden bei Regen. Weil sie nicht wasserdicht sind.",
@@ -83,7 +79,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "WACH AUF", bottom: "DIE WAHRHEIT FLIEGT ÜBER DIR" },
-        bg: F("pigeon,sky", 33),
+        bg: "assets/flickr/pigeon-sky-33.jpg",
         vibe: "fire",
       },
       {
@@ -120,7 +116,7 @@ const PRESENTATIONS = [
         subtitle: "Eine quantenphysikalische Aufarbeitung",
         emoji: "🧦",
         vibe: "cyber",
-        bg: F("socks,laundry", 4),
+        bg: "assets/flickr/socks-laundry-4.jpg",
       },
       {
         type: "bullets",
@@ -137,7 +133,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "6 SOCKEN REIN", bottom: "5 SOCKEN RAUS" },
-        bg: F("washingmachine", 8),
+        bg: "assets/flickr/washingmachine-8.jpg",
         vibe: "vapor",
       },
       {
@@ -157,7 +153,7 @@ const PRESENTATIONS = [
         heading: "Wo gehen sie hin?",
         emoji: "🌌",
         vibe: "void",
-        bg: F("portal,abstract", 9),
+        bg: "assets/flickr/portal-abstract-9.jpg",
         bullets: [
           "Eine Parallel-Dimension namens Sockistan.",
           "Dort ist eine einzelne Socke die offizielle Währung.",
@@ -168,7 +164,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "AKZEPTIERE ES", bottom: "ODER TRAGE SANDALEN" },
-        bg: F("sandals,beach", 11),
+        bg: "assets/flickr/sandals-beach-11.jpg",
         vibe: "sun",
       },
       {
@@ -201,7 +197,7 @@ const PRESENTATIONS = [
         subtitle: "Ein soziopolitischer Notstand",
         emoji: "🍝",
         vibe: "fire",
-        bg: F("spaghetti,pasta", 1),
+        bg: "assets/flickr/pasta-1.jpg",
       },
       {
         type: "bullets",
@@ -218,7 +214,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "MAMMA MIA", bottom: "KAPITULATION INTERNATIONALE" },
-        bg: F("italy,pasta", 6),
+        bg: "assets/flickr/italy-pasta-6.jpg",
         vibe: "sun",
       },
       {
@@ -238,7 +234,7 @@ const PRESENTATIONS = [
         heading: "Wer ist betroffen?",
         emoji: "👥",
         vibe: "fire",
-        bg: F("ketchup,bottle", 14),
+        bg: "assets/flickr/ketchup-bottle-14.jpg",
         bullets: [
           "Italienische Großmütter (emotional, irreparabel).",
           "Restaurants in Bayern (kulinarisch, finanziell).",
@@ -249,7 +245,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "IT'S A CRIME", bottom: "AND YOU KNOW IT" },
-        bg: F("tomato,splat", 17),
+        bg: "assets/flickr/tomato-splat-17.jpg",
         vibe: "noir",
       },
       {
@@ -279,7 +275,7 @@ const PRESENTATIONS = [
         subtitle: "Ein Konflikt-Coaching für moderne Beziehungen",
         emoji: "🥶",
         vibe: "vapor",
-        bg: F("fridge,kitchen", 2),
+        bg: "assets/flickr/fridge-kitchen-2.jpg",
       },
       {
         type: "bullets",
@@ -296,7 +292,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "WIR MÜSSEN", bottom: "REDEN." },
-        bg: F("fridge,open", 16),
+        bg: "assets/flickr/fridge-open-16.jpg",
         vibe: "noir",
       },
       {
@@ -326,7 +322,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "JOGHURT", bottom: "WAR ABGELAUFEN" },
-        bg: F("milk,bottle", 21),
+        bg: "assets/flickr/milk-bottle-21.jpg",
         vibe: "toxic",
       },
       {
@@ -356,7 +352,7 @@ const PRESENTATIONS = [
         subtitle: "Eine internationale Petition mit gefälschter UN-Vorlage",
         emoji: "📅",
         vibe: "sun",
-        bg: F("monday,calendar", 3),
+        bg: "assets/flickr/monday-calendar-3.jpg",
       },
       {
         type: "bullets",
@@ -373,7 +369,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "GARFIELD HATTE", bottom: "RECHT DIE GANZE ZEIT" },
-        bg: F("cat,sleeping", 19),
+        bg: "assets/flickr/cat-sleeping-19.jpg",
         vibe: "sun",
       },
       {
@@ -393,7 +389,7 @@ const PRESENTATIONS = [
         heading: "Forderungen",
         emoji: "✊",
         vibe: "fire",
-        bg: F("protest,sign", 22),
+        bg: "assets/flickr/protest-sign-22.jpg",
         bullets: [
           "Streichung des Montags ersatzlos.",
           "Sonntag direkt → Dienstag.",
@@ -404,7 +400,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "ICH HABE EINEN TRAUM", bottom: "IN DIESEM TRAUM IST SAMSTAG" },
-        bg: F("hammock,beach", 24),
+        bg: "assets/flickr/hammock-beach-24.jpg",
         vibe: "vapor",
       },
       {
@@ -429,7 +425,7 @@ const PRESENTATIONS = [
         subtitle: "Die ehrlichste Literatur des 21. Jahrhunderts",
         emoji: "🚽",
         vibe: "paper",
-        bg: F("graffiti,wall", 26),
+        bg: "assets/flickr/graffiti-wall-26.jpg",
       },
       {
         type: "bullets",
@@ -446,7 +442,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "HIER SITZT DU GUT", bottom: "HIER SITZT DU FEIN" },
-        bg: F("toilet,public", 29),
+        bg: "assets/flickr/toilet-public-29.jpg",
         vibe: "paper",
       },
       {
@@ -466,7 +462,7 @@ const PRESENTATIONS = [
         heading: "Stilistische Entwicklung",
         emoji: "📈",
         vibe: "paper",
-        bg: F("graffiti,bathroom", 31),
+        bg: "assets/flickr/graffiti-bathroom-31.jpg",
         bullets: [
           "1990er: Rohe Wut, schlechte Edding-Qualität.",
           "2010er: Minimalismus, mehr QR-Codes.",
@@ -477,7 +473,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "UNESCO", bottom: "WIR BRAUCHEN EUCH JETZT" },
-        bg: F("marble,statue", 34),
+        bg: "assets/flickr/marble-statue-34.jpg",
         vibe: "noir",
       },
       {
@@ -507,7 +503,7 @@ const PRESENTATIONS = [
         subtitle: "In 7 schmerzhaften, größtenteils legalen Schritten",
         emoji: "🇩🇪",
         vibe: "noir",
-        bg: F("bundestag,berlin", 36),
+        bg: "assets/flickr/bundestag-berlin-36.jpg",
       },
       {
         type: "bullets",
@@ -524,7 +520,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DA MÜSSEN WIR", bottom: "DIFFERENZIEREN" },
-        bg: F("microphone,podium", 38),
+        bg: "assets/flickr/microphone-podium-38.jpg",
         vibe: "paper",
       },
       {
@@ -544,7 +540,7 @@ const PRESENTATIONS = [
         heading: "Schritt 3: Eine Partei finden",
         emoji: "🎩",
         vibe: "noir",
-        bg: F("flag,germany", 41),
+        bg: "assets/flickr/flag-germany-41.jpg",
         bullets: [
           "Irgendeine. Wirklich.",
           "Wechseln, wenn die Umfragen schlecht sind.",
@@ -555,7 +551,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "VIBES ONLY", bottom: "POLITIK IST EINE STIMMUNG" },
-        bg: F("crowd,rally", 44),
+        bg: "assets/flickr/crowd-rally-44.jpg",
         vibe: "fire",
       },
       {
@@ -588,7 +584,7 @@ const PRESENTATIONS = [
         subtitle: "Der jährliche algorithmische Therapeut, der dich nicht therapieren will",
         emoji: "🎧",
         vibe: "vapor",
-        bg: F("headphones,neon", 46),
+        bg: "assets/flickr/headphones-neon-46.jpg",
       },
       {
         type: "bullets",
@@ -605,7 +601,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DU HAST 412×", bottom: "'DRIVERS LICENSE' GEHÖRT" },
-        bg: F("headphones,girl", 48),
+        bg: "assets/flickr/headphones-girl-48.jpg",
         vibe: "vapor",
       },
       {
@@ -625,7 +621,7 @@ const PRESENTATIONS = [
         heading: "Das soziale Dilemma",
         emoji: "😬",
         vibe: "vapor",
-        bg: F("phone,scroll", 51),
+        bg: "assets/flickr/phone-scroll-51.jpg",
         bullets: [
           "Postest du es: peinlich.",
           "Postest du es nicht: verdächtig.",
@@ -636,7 +632,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "TOP GENRE", bottom: "SAD GERMAN INDIE" },
-        bg: F("rain,sad", 53),
+        bg: "assets/flickr/rain-sad-53.jpg",
         vibe: "noir",
       },
       {
@@ -666,7 +662,7 @@ const PRESENTATIONS = [
         subtitle: "Vorgetragen als Heldenepos. Anpassbar an Stelle / Verzweiflung.",
         emoji: "📜",
         vibe: "toxic",
-        bg: F("scroll,old", 55),
+        bg: "assets/flickr/scroll-old-55.jpg",
       },
       {
         type: "bullets",
@@ -683,7 +679,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "EINE LEGENDE", bottom: "WAR GEBOREN" },
-        bg: F("newborn,baby", 57),
+        bg: "assets/flickr/newborn-baby-57.jpg",
         vibe: "sun",
       },
       {
@@ -691,7 +687,7 @@ const PRESENTATIONS = [
         heading: "Die Schulzeit",
         emoji: "🏫",
         vibe: "toxic",
-        bg: F("classroom,empty", 59),
+        bg: "assets/flickr/classroom-empty-59.jpg",
         bullets: [
           "Mathe: Kampf. Aber ich habe überlebt.",
           "Sportunterricht: das wahre Trauma.",
@@ -714,7 +710,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "ICH WERDE DIESE WELT", bottom: "VERÄNDERN. IRGENDWANN." },
-        bg: F("sunrise,hope", 62),
+        bg: "assets/flickr/sunrise-hope-62.jpg",
         vibe: "sun",
       },
       {
@@ -744,7 +740,7 @@ const PRESENTATIONS = [
         subtitle: "Eingereicht unter erheblichem psychischen Druck",
         emoji: "💔",
         vibe: "fire",
-        bg: F("breakup,sad", 64),
+        bg: "assets/flickr/breakup-sad-64.jpg",
       },
       {
         type: "bullets",
@@ -761,7 +757,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "JA", bottom: "DU HATTEST RECHT" },
-        bg: F("couple,fight", 66),
+        bg: "assets/flickr/couple-fight-66.jpg",
         vibe: "fire",
       },
       {
@@ -769,7 +765,7 @@ const PRESENTATIONS = [
         heading: "Punkt 1: Der Geschirrspüler",
         emoji: "🍽️",
         vibe: "fire",
-        bg: F("dishwasher,kitchen", 69),
+        bg: "assets/flickr/dishwasher-kitchen-69.jpg",
         bullets: [
           "Ja. Die Tassen gehören oben. Ich habe es eingesehen.",
           "Nein, der Topf passt nicht da rein. Niemals.",
@@ -792,7 +788,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "HILFE", bottom: "WENN IHR DAS SEHT" },
-        bg: F("silhouette,fog", 71),
+        bg: "assets/flickr/silhouette-fog-71.jpg",
         vibe: "noir",
       },
       {
@@ -825,7 +821,7 @@ const PRESENTATIONS = [
         subtitle: "Die einzige valide Strategie. Beweise inklusive.",
         emoji: "🔨",
         vibe: "fire",
-        bg: F("hammer,red", 73),
+        bg: "assets/flickr/hammer-red-73.jpg",
       },
       {
         type: "bullets",
@@ -842,7 +838,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "PLANT NICHT", bottom: "RENNT" },
-        bg: F("runner,sprint", 75),
+        bg: "assets/flickr/runner-sprint-75.jpg",
         vibe: "fire",
       },
       {
@@ -850,7 +846,7 @@ const PRESENTATIONS = [
         heading: "Die Mathematik",
         emoji: "🧮",
         vibe: "fire",
-        bg: F("clock,running", 78),
+        bg: "assets/flickr/clock-running-78.jpg",
         bullets: [
           "Defenders setzen Gadgets in 30 Sekunden auf.",
           "Du bist in 8 Sekunden bei Site.",
@@ -873,7 +869,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "HAMMER HOCH", bottom: "HIRN AUS" },
-        bg: F("explosion,wall", 81),
+        bg: "assets/flickr/explosion-wall-81.jpg",
         vibe: "fire",
       },
       {
@@ -916,7 +912,7 @@ const PRESENTATIONS = [
         heading: "Erste Symptome",
         emoji: "👀",
         vibe: "noir",
-        bg: F("dark,silhouette", 174),
+        bg: "assets/flickr/dark-silhouette-174.jpg",
         bullets: [
           "Spielt nur einen einzigen Operator. Niemals jemand anderen. Auch nicht beim Operator-Ban.",
           "Spricht in der Lobby nicht. Kommt einfach in deinen Rücken.",
@@ -935,7 +931,7 @@ const PRESENTATIONS = [
         heading: "Soziales Verhalten",
         emoji: "🥷",
         vibe: "noir",
-        bg: F("ninja,shadow", 178),
+        bg: "assets/flickr/ninja-shadow-178.jpg",
         bullets: [
           "Steht plötzlich neben dir. Du hast ihn nicht kommen gehört. Niemand hat.",
           "Zerstört dich emotional in 3 Sätzen. Schweigt dann wieder für 40 Minuten.",
@@ -949,7 +945,7 @@ const PRESENTATIONS = [
         heading: "Die Silent-Step-Philosophie",
         emoji: "🌫️",
         vibe: "noir",
-        bg: F("smoke,foggy", 180),
+        bg: "assets/flickr/smoke-foggy-180.jpg",
         bullets: [
           "Im Spiel: niemand hört ihn kommen.",
           "Im echten Leben: niemand hört ihn weggehen.",
@@ -968,7 +964,7 @@ const PRESENTATIONS = [
         heading: "Wie erkenne ich einen Cav-Main?",
         emoji: "🔍",
         vibe: "noir",
-        bg: F("magnifying,glass", 183),
+        bg: "assets/flickr/magnifying-glass-183.jpg",
         bullets: [
           "Schwarze Klamotten. Immer. Auch im Sommer.",
           "Antwortet auf Smalltalk mit einem leichten Nicken. Mehr nicht.",
@@ -982,7 +978,7 @@ const PRESENTATIONS = [
         heading: "Survivor's Guide",
         emoji: "🆘",
         vibe: "fire",
-        bg: F("survival,manual", 187),
+        bg: "assets/flickr/survival-manual-187.jpg",
         bullets: [
           "Schau immer hinter dich. Auch beim Frühstück.",
           "Drohnen sind sinnlos. Sie hat sie schon zerstört.",
@@ -994,7 +990,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "AKZEPTANZ", bottom: "KOMMT VON HINTEN" },
-        bg: F("dark,figure", 190),
+        bg: "assets/flickr/dark-figure-190.jpg",
         vibe: "fire",
       },
       {
@@ -1019,7 +1015,7 @@ const PRESENTATIONS = [
         subtitle: "Eine Lobrede unter Tränen der Erleuchtung",
         emoji: "👑",
         vibe: "toxic",
-        bg: F("crown,gold", 94),
+        bg: "assets/flickr/crown-gold-94.jpg",
       },
       {
         type: "bullets",
@@ -1043,7 +1039,7 @@ const PRESENTATIONS = [
         heading: "Der Granatwerfer ist Kunst",
         emoji: "💥",
         vibe: "fire",
-        bg: F("explosion,smoke", 99),
+        bg: "assets/flickr/explosion-smoke-99.jpg",
         bullets: [
           "Flächenkontrolle wie ein Stratege im Mittelalter.",
           "Drohnen verbrennen, Roamer verbrennen, Hoffnung verbrennen.",
@@ -1066,7 +1062,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "WER GEGEN TACHANKA IST", bottom: "IST GEGEN DIE FREIHEIT" },
-        bg: F("flag,wind", 101),
+        bg: "assets/flickr/flag-wind-101.jpg",
         vibe: "fire",
       },
       {
@@ -1103,7 +1099,7 @@ const PRESENTATIONS = [
         subtitle: "Eine investigative Reportage in 3 Stäken",
         emoji: "🚽",
         vibe: "vapor",
-        bg: F("toilet,blue", 103),
+        bg: "assets/flickr/toilet-blue-103.jpg",
       },
       {
         type: "bullets",
@@ -1120,7 +1116,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "PLATZ 3", bottom: "OREGON KIDS BATHROOM" },
-        bg: F("bathroom,small", 106),
+        bg: "assets/flickr/bathroom-small-106.jpg",
         vibe: "vapor",
       },
       {
@@ -1140,7 +1136,7 @@ const PRESENTATIONS = [
         heading: "Platz 2: Clubhouse — irgendwas im Keller",
         emoji: "🥈",
         vibe: "noir",
-        bg: F("basement,dark", 108),
+        bg: "assets/flickr/basement-dark-108.jpg",
         bullets: [
           "Ich weiß nicht, ob das eine Toilette ist, aber es riecht so.",
           "Mira-Spiegel-freundlich.",
@@ -1151,7 +1147,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "PLATZ 1", bottom: "CHALET BAR-TOILETTE" },
-        bg: F("bar,bathroom", 111),
+        bg: "assets/flickr/bar-bathroom-111.jpg",
         vibe: "fire",
       },
       {
@@ -1188,7 +1184,7 @@ const PRESENTATIONS = [
         subtitle: "Speziell für Tode durch Lord Tachanka. Klinisch dokumentiert.",
         emoji: "🤬",
         vibe: "fire",
-        bg: F("angry,gamer", 113),
+        bg: "assets/flickr/angry-gamer-113.jpg",
       },
       {
         type: "bullets",
@@ -1205,7 +1201,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DAS WAR NICHT", bottom: "TACHANKA. ODER?" },
-        bg: F("gamer,headset", 116),
+        bg: "assets/flickr/gamer-headset-116.jpg",
         vibe: "fire",
       },
       {
@@ -1213,7 +1209,7 @@ const PRESENTATIONS = [
         heading: "Phase 2: Wut",
         emoji: "💢",
         vibe: "fire",
-        bg: F("keyboard,broken", 119),
+        bg: "assets/flickr/keyboard-broken-119.jpg",
         bullets: [
           "Tastatur leidet.",
           "Mikrofon explodiert.",
@@ -1236,7 +1232,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "AKZEPTANZ?", bottom: "NEIN. NIE." },
-        bg: F("silhouette,night", 121),
+        bg: "assets/flickr/silhouette-night-121.jpg",
         vibe: "noir",
       },
       {
@@ -1273,7 +1269,7 @@ const PRESENTATIONS = [
         subtitle: "Eine wissenschaftliche Lösung, die Ubisoft uns vorenthält",
         emoji: "🪞",
         vibe: "cyber",
-        bg: F("ice,arctic", 124),
+        bg: "assets/flickr/ice-arctic-124.jpg",
       },
       {
         type: "bullets",
@@ -1290,7 +1286,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "80.000 SPIEGEL", bottom: "1 PROBLEM GELÖST" },
-        bg: F("mirrors,reflection", 127),
+        bg: "assets/flickr/mirrors-reflection-127.jpg",
         vibe: "cyber",
       },
       {
@@ -1298,7 +1294,7 @@ const PRESENTATIONS = [
         heading: "Logistik",
         emoji: "📦",
         vibe: "cyber",
-        bg: F("snow,ship", 129),
+        bg: "assets/flickr/snow-ship-129.jpg",
         bullets: [
           "Mira persönlich überwacht den Einbau (sie kriegt Spesen).",
           "Hard-Breachers sind nicht nötig — Eis ist soft breach.",
@@ -1321,7 +1317,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "SAVE THE PLANET", bottom: "OPEN THE LOBBY" },
-        bg: F("earth,space", 131),
+        bg: "assets/flickr/earth-space-131.jpg",
         vibe: "cyber",
       },
       {
@@ -1358,7 +1354,7 @@ const PRESENTATIONS = [
         subtitle: "Ein ungelöster Konflikt seit 2015",
         emoji: "🌐",
         vibe: "void",
-        bg: F("globe,politics", 134),
+        bg: "assets/flickr/globe-politics-134.jpg",
       },
       {
         type: "bullets",
@@ -1375,7 +1371,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "BOMBSITE A", bottom: "GEHÖRT IRGENDWEM" },
-        bg: F("border,fence", 136),
+        bg: "assets/flickr/border-fence-136.jpg",
         vibe: "void",
       },
       {
@@ -1383,7 +1379,7 @@ const PRESENTATIONS = [
         heading: "Wirtschaftliche Folgen",
         emoji: "💰",
         vibe: "void",
-        bg: F("market,money", 139),
+        bg: "assets/flickr/market-money-139.jpg",
         bullets: [
           "Reinforcement-Markt: stabil bei 8 Walls pro Match.",
           "Drohnen: inflationär, früher 2 pro Person, heute kaum noch verfügbar.",
@@ -1406,7 +1402,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "PEEKEN", bottom: "PRAYEN. STERBEN." },
-        bg: F("war,smoke", 141),
+        bg: "assets/flickr/war-smoke-141.jpg",
         vibe: "fire",
       },
       {
@@ -1443,7 +1439,7 @@ const PRESENTATIONS = [
         subtitle: "Eine Hommage an die übersehenen Held:innen",
         emoji: "🤖",
         vibe: "cyber",
-        bg: F("drone,robot", 144),
+        bg: "assets/flickr/drone-robot-144.jpg",
       },
       {
         type: "bullets",
@@ -1460,7 +1456,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "SIE STIRBT", bottom: "FÜR DEINE SÜNDEN" },
-        bg: F("robot,broken", 146),
+        bg: "assets/flickr/robot-broken-146.jpg",
         vibe: "cyber",
       },
       {
@@ -1468,7 +1464,7 @@ const PRESENTATIONS = [
         heading: "Was die Drohne wirklich durchmacht",
         emoji: "🥲",
         vibe: "cyber",
-        bg: F("circuit,electric", 149),
+        bg: "assets/flickr/circuit-electric-149.jpg",
         bullets: [
           "Wird durch Tische geworfen.",
           "Vergessen in unzähligen Vault-Spots.",
@@ -1491,7 +1487,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DROHNEN-DENKMAL", bottom: "JETZT" },
-        bg: F("monument,statue", 151),
+        bg: "assets/flickr/monument-statue-151.jpg",
         vibe: "noir",
       },
       {
@@ -1528,7 +1524,7 @@ const PRESENTATIONS = [
         subtitle: "Eine Verschwörungstheorie. Mit Indizien.",
         emoji: "🎯",
         vibe: "noir",
-        bg: F("crosshair,red", 153),
+        bg: "assets/flickr/crosshair-red-153.jpg",
       },
       {
         type: "bullets",
@@ -1545,7 +1541,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "ASH HAT SICH", bottom: "NICHT MAL BEWEGT" },
-        bg: F("scope,sniper", 156),
+        bg: "assets/flickr/scope-sniper-156.jpg",
         vibe: "noir",
       },
       {
@@ -1553,7 +1549,7 @@ const PRESENTATIONS = [
         heading: "Die Theorie",
         emoji: "🧠",
         vibe: "noir",
-        bg: F("matrix,code", 159),
+        bg: "assets/flickr/matrix-code-159.jpg",
         bullets: [
           "Ash hat einen geheimen Pakt mit der Hitbox.",
           "Ihr R4-C ist mit Aimbot-Lore gesegnet (lore-akkurat).",
@@ -1576,7 +1572,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "NIEMALS PEEKEN", bottom: "EINFACH CAMP" },
-        bg: F("camping,tent", 161),
+        bg: "assets/flickr/camping-tent-161.jpg",
         vibe: "toxic",
       },
       {
@@ -1613,7 +1609,7 @@ const PRESENTATIONS = [
         subtitle: "Eine kulturelle Studie deutscher Discord-Server",
         emoji: "👩‍👦",
         vibe: "fire",
-        bg: F("microphone,gaming", 163),
+        bg: "assets/flickr/microphone-gaming-163.jpg",
       },
       {
         type: "bullets",
@@ -1630,7 +1626,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "HI TEAM", bottom: "(15 MIN SPÄTER)" },
-        bg: F("headset,gaming", 166),
+        bg: "assets/flickr/headset-gaming-166.jpg",
         vibe: "fire",
       },
       {
@@ -1638,7 +1634,7 @@ const PRESENTATIONS = [
         heading: "Was Mütter damit zu tun haben",
         emoji: "👵",
         vibe: "fire",
-        bg: F("mother,family", 169),
+        bg: "assets/flickr/mother-family-169.jpg",
         bullets: [
           "Statistisch betrachtet: nichts.",
           "Emotional betrachtet: alles.",
@@ -1661,7 +1657,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "RUF DEINE MUTTER AN", bottom: "SOFORT." },
-        bg: F("phone,call", 172),
+        bg: "assets/flickr/phone-call-172.jpg",
         vibe: "sun",
       },
       {
@@ -1729,7 +1725,7 @@ const PRESENTATIONS = [
         heading: "Die 5 Säulen der modernen Ernährung",
         emoji: "🏛️",
         vibe: "toxic",
-        bg: "assets/karaoke/diet/image3.png",
+        bg: "assets/karaoke/diet/image4.png",
         bullets: [
           "1. Avocado. Aus Prinzip.",
           "2. Smoothie Bowls. Sehen besser aus, als sie schmecken.",
@@ -1775,7 +1771,7 @@ const PRESENTATIONS = [
         heading: "Fazit",
         emoji: "🥖",
         vibe: "toxic",
-        bg: "assets/karaoke/diet/image11.png",
+        bg: "assets/karaoke/diet/image10.png",
         bullets: [
           "Iss, was du willst. Stirb sowieso.",
           "Die einzige unzweifelhaft gesunde Aktivität ist: aufhören, drüber zu reden.",
@@ -1880,7 +1876,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "FRAGEN?", bottom: "(BITTE NICHT)" },
-        bg: "assets/karaoke/startup/image15.png",
+        emoji: "❓",
         vibe: "noir",
       },
     ],
