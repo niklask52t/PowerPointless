@@ -1832,7 +1832,7 @@ const PRESENTATIONS = [
         heading: "Erstaunliche Fakten",
         emoji: "🐟",
         vibe: "vapor",
-        bg: "assets/karaoke/delfine/image5.png",
+        bg: "assets/karaoke/delfine/image1.png",
         bullets: [
           "Delfine schlafen mit nur einer Gehirnhälfte. Wir schlafen mit beiden Gehirnhälften und können trotzdem kein Excel.",
           "Delfine erkennen sich im Spiegel. Manche Menschen auch — beim Fotografieren ihrer eigenen Frühstücksbowl.",
@@ -1856,7 +1856,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DELFINE: 1", bottom: "MENSCHHEIT: 0" },
-        bg: "assets/karaoke/delfine/image11.png",
+        bg: "assets/karaoke/delfine/image9.jpg",
         vibe: "fire",
       },
       {
@@ -1891,7 +1891,7 @@ const PRESENTATIONS = [
         subtitle: "Adoptiere einen Delfin. Oder zumindest sein WhatsApp-Profilbild.",
         emoji: "🐬",
         vibe: "vapor",
-        bg: "assets/karaoke/delfine/image14.png",
+        bg: "assets/karaoke/delfine/image2.png",
       },
     ],
   },
