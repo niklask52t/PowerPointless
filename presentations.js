@@ -250,7 +250,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "IT'S A CRIME", bottom: "AND YOU KNOW IT" },
-        bg: F("crimescene,red", 17),
+        bg: F("tomato,splat", 17),
         vibe: "noir",
       },
       {
@@ -327,7 +327,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "JOGHURT", bottom: "WAR ABGELAUFEN" },
-        bg: F("yogurt,expired", 21),
+        bg: F("milk,bottle", 21),
         vibe: "toxic",
       },
       {
@@ -374,7 +374,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "GARFIELD HATTE", bottom: "RECHT DIE GANZE ZEIT" },
-        bg: F("orange,cat", 19),
+        bg: F("cat,sleeping", 19),
         vibe: "sun",
       },
       {
@@ -405,7 +405,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "ICH HABE EINEN TRAUM", bottom: "IN DIESEM TRAUM IST SAMSTAG" },
-        bg: F("weekend,relax", 24),
+        bg: F("hammock,beach", 24),
         vibe: "vapor",
       },
       {
@@ -478,7 +478,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "UNESCO", bottom: "WIR BRAUCHEN EUCH JETZT" },
-        bg: F("museum,art", 34),
+        bg: F("marble,statue", 34),
         vibe: "noir",
       },
       {
@@ -525,7 +525,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DA MÜSSEN WIR", bottom: "DIFFERENZIEREN" },
-        bg: F("politician,suit", 38),
+        bg: F("microphone,podium", 38),
         vibe: "paper",
       },
       {
@@ -606,7 +606,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DU HAST 412×", bottom: "'DRIVERS LICENSE' GEHÖRT" },
-        bg: F("sad,window", 48),
+        bg: F("headphones,girl", 48),
         vibe: "vapor",
       },
       {
@@ -684,7 +684,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "EINE LEGENDE", bottom: "WAR GEBOREN" },
-        bg: F("baby,heroic", 57),
+        bg: F("newborn,baby", 57),
         vibe: "sun",
       },
       {
@@ -762,7 +762,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "JA", bottom: "DU HATTEST RECHT" },
-        bg: F("woman,arguing", 66),
+        bg: F("couple,fight", 66),
         vibe: "fire",
       },
       {
@@ -793,7 +793,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "HILFE", bottom: "WENN IHR DAS SEHT" },
-        bg: F("dark,hand", 71),
+        bg: F("silhouette,fog", 71),
         vibe: "noir",
       },
       {
@@ -843,7 +843,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "PLANT NICHT", bottom: "RENNT" },
-        bg: F("running,door", 75),
+        bg: F("runner,sprint", 75),
         vibe: "fire",
       },
       {
@@ -952,7 +952,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "SIE WEIß", bottom: "WO DU BIST." },
-        bg: F("knife,shadow", 92),
+        bg: F("eye,closeup", 92),
         vibe: "fire",
       },
       {
@@ -1030,7 +1030,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "WER GEGEN TACHANKA IST", bottom: "IST GEGEN DIE FREIHEIT" },
-        bg: F("freedom,sky", 101),
+        bg: F("flag,wind", 101),
         vibe: "fire",
       },
       {
@@ -1155,7 +1155,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "DAS WAR NICHT", bottom: "TACHANKA. ODER?" },
-        bg: F("confused,man", 116),
+        bg: F("gamer,headset", 116),
         vibe: "fire",
       },
       {
@@ -1186,7 +1186,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "AKZEPTANZ?", bottom: "NEIN. NIE." },
-        bg: F("dark,giveup", 121),
+        bg: F("silhouette,night", 121),
         vibe: "noir",
       },
       {
@@ -1545,7 +1545,7 @@ const PRESENTATIONS = [
       {
         type: "meme",
         meme: { top: "HI TEAM", bottom: "(15 MIN SPÄTER)" },
-        bg: F("argument,phone", 166),
+        bg: F("headset,gaming", 166),
         vibe: "fire",
       },
       {
